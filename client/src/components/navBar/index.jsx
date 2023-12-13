@@ -14,7 +14,7 @@ class NavBar extends React.Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto" >
-              <Nav.Link href="#home">Sobre mim 💪</Nav.Link>
+              <Nav.Link href="/whoiam">Sobre mim 💪</Nav.Link>
               <Nav.Link href="#link">Link</Nav.Link>
               <NavDropdown title="Trabalhe comigo" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">
