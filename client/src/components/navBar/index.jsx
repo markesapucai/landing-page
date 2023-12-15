@@ -15,7 +15,7 @@ class NavBar extends React.Component {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto" >
               <Nav.Link href="/whoiam">Sobre mim 💪</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
+              <Nav.Link href="#link">Serviços</Nav.Link>
               <NavDropdown title="Trabalhe comigo" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">
                   Resolver seu problema com TECH
@@ -23,7 +23,7 @@ class NavBar extends React.Component {
                 <NavDropdown.Item href="#action/3.2">
                   Another action
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Freelancer</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">
                   Me mande um e-mail <br/>

@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/whoiam', (req, res) => {
-  res.send('hello world')
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
 })
 
 const PORT = process.env.PORT || 5000;
