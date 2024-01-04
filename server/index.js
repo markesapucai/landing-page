@@ -1,19 +1,16 @@
-const express = require('express');
-const path = require('path');
+require('dotenv').config();
 
+const express = require('express');
 const app = express();
 
-// Servir arquivos estáticos do React
-app.use(express.static(path.join(__dirname, '../client/build')));
+const mongoose = require('mongoose');
+mongoose.connect(process.env.CONNECTIONSTRING)
+  .catch(e => console.log(e));
 
-// Direcionar todas as outras solicitações para o ponto de entrada do React
+
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  res.send('hello world')
 });
-
-app.get('/whoiam', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
-})
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
