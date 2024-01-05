@@ -1,14 +1,14 @@
 const UserModel = require('../models/userModel');
 
-UserModel.create({
-  name: 'olaMundoAlo',
-  email: 'puts@maisumavez.com',
-  emailVerified: true,
-  password: '123456',
-  phone: {
-    number: '+555 635 498 12',
-    verified: true
+exports.index = (req, res) => {
+  res.send('tá fluindo esse tixe')
+}
+
+exports.test = async function(req, res) {
+  try {
+    const userTest = new UserModel();
+    await userTest.test();
+  } catch (error) {
+    console.log(error)
   }
-})
-  .then(dados => console.log(dados))
-  .catch(e => console.log(e));
+}
