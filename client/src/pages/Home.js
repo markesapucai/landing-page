@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const Home = () => {
- /* const [workouts, setWorkouts] = useState(null);
+ /*const [workouts, setWorkouts] = useState(null);
 
   useEffect(() => {
     const fetchWorkouts = async () => {
