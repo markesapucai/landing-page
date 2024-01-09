@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 const Home = () => {
  /*const [workouts, setWorkouts] = useState(null);
 
@@ -18,7 +16,7 @@ const Home = () => {
 */
   return (
     <div className="home">
-      
+      <h1>Está é a homePage</h1>
     </div>
   )
 }
