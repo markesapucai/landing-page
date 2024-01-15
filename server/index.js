@@ -3,6 +3,11 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 
+//cors
+const cors = require('cors');
+app.use(cors('http://localhost:5173'));
+
+
 //database
 const mongoose = require('mongoose');
 mongoose.connect(process.env.CONNECTIONSTRING)
@@ -13,14 +18,16 @@ const route = require('./routes');
 app.use(route);
 
 //csurf
+/*
 const crsf = require('csurf');
-app.use(crsf());
-
+app.use(crsf({ cookie: true }));
+*/
 //Session
+/*
 const session = require('express-session');
 const sessionOptions = session({
   secret: 'sgfdgdfhdfhd',
-  store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }),
+  store: mongoose.create({ mongoUrl: process.env.CONNECTIONSTRING }),
   resave: false,
   saveUninitialized: false,
   cookie: {
@@ -29,6 +36,7 @@ const sessionOptions = session({
   }
 })
 app.use(sessionOptions);
+*/
 
 //Port
 const PORT = process.env.PORT || 5000;

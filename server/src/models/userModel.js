@@ -7,7 +7,6 @@ const UserSchema = new mongoose.Schema({
   },
   email: {
     type: String,
-    unique: true,
     lowercase: true
   },
   emailVerified: {
@@ -29,8 +28,21 @@ const UserSchema = new mongoose.Schema({
 const UserModel = mongoose.model('User', UserSchema);
 
 class User {
-  async test() {
-    await UserModel.create({
+  async test(reqBody) {
+    await UserModel.create(reqBody)
+      .then(dados => console.log(dados))
+      .catch(e => console.error(e))
+  }
+}
+
+module.exports = User;
+
+
+
+// OBJ test
+/*
+{
+      
       name: 'olaMundoAlo',
       email: 'puts@maisumavez.com',
       emailVerified: true,
@@ -39,10 +51,6 @@ class User {
         number: '+555 635 498 12',
         verified: true
       }
-    })
-      .then(dados => console.log(dados))
-      .catch(e => console.log(e))
-  }
-}
-
-module.exports = User;
+      
+    }
+*/

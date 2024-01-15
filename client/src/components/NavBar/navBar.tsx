@@ -1,7 +1,4 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function NavBar() {
@@ -14,7 +11,8 @@ export default function NavBar() {
 
           <Nav className="ms-auto">
             <Nav.Link href="/login">Login</Nav.Link>
-            <Nav.Link href="#link">Cadastro</Nav.Link>
+            <Nav.Link href="/register">Register</Nav.Link>
+            
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
