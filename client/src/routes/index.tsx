@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Page404 from "../pages/Page404";
-import Register from "../pages/Register";
+import Register from "../services/RegisterValidation";
 
 export default function Routees() {
   return (
