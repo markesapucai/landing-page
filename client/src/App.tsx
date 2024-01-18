@@ -8,7 +8,7 @@ const server: AxiosInstance = axios.create({
   baseURL: 'http://localhost:5000'
 })
 
-export function RegisterUser(formData: {
+interface FormDataInterface {
   formName: string;
   formLastName: string;
   formEmail: string;
@@ -16,7 +16,9 @@ export function RegisterUser(formData: {
   formMonth: number;
   formDay: number;
   formYear: number;
-}) {
+}
+
+export function RegisterUser(formData: FormDataInterface) {
   server.post('/register', {
     name: formData.formName,
     lastName: formData.formLastName,
@@ -30,8 +32,11 @@ export function RegisterUser(formData: {
     .catch(error => console.error(error.response || error.message));
 }
 
-export function LoginUser() {
-  server.post('/login');
+export function LoginUser(formData: FormDataInterface) {
+  server.post('/login', {
+    email: formData.formEmail,
+    password: formData.formPassword
+  });
 }
 
 function App() {
