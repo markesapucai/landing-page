@@ -9,25 +9,29 @@ const server: AxiosInstance = axios.create({
 })
 
 export function RegisterUser(formData: {
-  formGridName: string;
-  formGridLastName: string;
-  formGridEmail: string;
-  formGridPassword: string;
-  formGridMonth: number;
-  formGridDay: number;
-  formGridYear: number;
+  formName: string;
+  formLastName: string;
+  formEmail: string;
+  formPassword: string;
+  formMonth: number;
+  formDay: number;
+  formYear: number;
 }) {
-  server.post('/test', {
-    name: formData.formGridName,
-    lastName: formData.formGridLastName,
-    email: formData.formGridEmail,
-    password: formData.formGridPassword,
-    month: formData.formGridMonth,
-    day: formData.formGridDay,
-    year: formData.formGridYear,
+  server.post('/register', {
+    name: formData.formName,
+    lastName: formData.formLastName,
+    email: formData.formEmail,
+    password: formData.formPassword,
+    month: formData.formMonth,
+    day: formData.formDay,
+    year: formData.formYear,
   })
     .then(response => console.log(response.data))
-    .catch(error => console.error(error + 'oi'));
+    .catch(error => console.error(error.response || error.message));
+}
+
+export function LoginUser() {
+  server.post('/login');
 }
 
 function App() {

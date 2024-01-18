@@ -9,12 +9,14 @@ const UserController = require('./src/controllers/UserController');
 
 route.get('/', UserController.index);
 
-route.post('/test', (req, res) => {
-  console.log(JSON.stringify(req.body));
-  console.log(req.body);
-  UserController.test(req.body);
+route.post('/register', (req, res) => {
+  UserController.register(req.body);
 });
 
-route.post('/register', UserController.index); // Cadastrar no banco de dados aqui
+route.post('/login', (req, res) => {
+  UserController.login(req.body);
+});
+
+//route.post('/register', UserController.index); // Cadastrar no banco de dados aqui
 
 module.exports = route;

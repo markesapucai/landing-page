@@ -69,15 +69,15 @@ import NavBar from "../components/NavBar/navBar";
 
 interface RegisterProps {
   FormData: {
-    formGridName: string;
-    formGridLastName: string;
-    formGridEmail: string;
-    formGridPassword: string;
-    formGridMonth: number;
-    formGridDay: number;
-    formGridYear: number;
+    formName: string;
+    formLastName: string;
+    formEmail: string;
+    formPassword: string;
+    formMonth: number;
+    formDay: number;
+    formYear: number;
   }
-  onChange: (FormGrid: keyof RegisterProps['FormData'], value: string | null) => void;
+  onChange: (Form: keyof RegisterProps['FormData'], value: string | null) => void;
   onSubmit: () => void;
 }
 
@@ -88,68 +88,68 @@ const Register: React.FC<RegisterProps> = ({ FormData, onChange, onSubmit }) => 
       <NavBar />
       <Form className='col-md-3 mx-auto my-5'>
         <Row className="mb-3">
-          <Form.Group as={Col} controlId="formGridName">
+          <Form.Group as={Col} controlId="formName">
             <Form.Label>First Name</Form.Label>
             <Form.Control
               type="text"
-              value={FormData.formGridName}
-              onChange={e => onChange('formGridName', e.target.value)}
+              value={FormData.formName}
+              onChange={e => onChange('formName', e.target.value)}
               placeholder="Enter Name" />
           </Form.Group>
 
-          <Form.Group as={Col} controlId="formGridLastName">
+          <Form.Group as={Col} controlId="formLastName">
             <Form.Label>Last Name</Form.Label>
             <Form.Control
               type="text"
-              value={FormData.formGridLastName}
-              onChange={e => onChange('formGridLastName', e.target.value)}
+              value={FormData.formLastName}
+              onChange={e => onChange('formLastName', e.target.value)}
               placeholder="Last Name" />
           </Form.Group>
         </Row>
 
-        <Form.Group controlId="formGridEmail">
+        <Form.Group controlId="formEmail">
           <Form.Label>Email</Form.Label>
           <Form.Control
             type="email"
-            value={FormData.formGridEmail}
-            onChange={(e) => onChange('formGridEmail', e.target.value)}
+            value={FormData.formEmail}
+            onChange={(e) => onChange('formEmail', e.target.value)}
             placeholder="Enter email" />
         </Form.Group>
 
-        <Form.Group controlId="formGridPassword">
+        <Form.Group controlId="formPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
             type="password"
-            value={FormData.formGridPassword}
-            onChange={(e) => onChange('formGridPassword', e.target.value)}
+            value={FormData.formPassword}
+            onChange={(e) => onChange('formPassword', e.target.value)}
             placeholder="Password" />
         </Form.Group>
 
         <Row className="mb-3">
-          <Form.Group as={Col} controlId="formGridMonth">
+          <Form.Group as={Col} controlId="formMonth">
             <Form.Label>Month</Form.Label>
             <Form.Control
               type="number"
-              value={FormData.formGridMonth}
-              onChange={(e) => onChange('formGridMonth', e.target.value)}
+              value={FormData.formMonth}
+              onChange={(e) => onChange('formMonth', e.target.value)}
             />
           </Form.Group>
 
-          <Form.Group as={Col} controlId="formGridDay">
+          <Form.Group as={Col} controlId="formDay">
             <Form.Label>Day</Form.Label>
             <Form.Control
               type="number"
-              value={FormData.formGridDay}
-              onChange={(e) => onChange('formGridDay', e.target.value)}
+              value={FormData.formDay}
+              onChange={(e) => onChange('formDay', e.target.value)}
             />
           </Form.Group>
 
-          <Form.Group as={Col} controlId="formGridYear">
+          <Form.Group as={Col} controlId="formYear">
             <Form.Label>Year</Form.Label>
             <Form.Control
               type="number"
-              value={FormData.formGridYear}
-              onChange={(e) => onChange('formGridYear', e.target.value)}
+              value={FormData.formYear}
+              onChange={(e) => onChange('formYear', e.target.value)}
             />
           </Form.Group>
         </Row>

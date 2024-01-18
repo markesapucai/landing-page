@@ -4,6 +4,7 @@ import Stack from 'react-bootstrap/Stack';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../components/NavBar/navBar.css'
+import { LoginUser } from "../App";
 
 
 export default function Login() {
@@ -27,11 +28,11 @@ export default function Login() {
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
             <Form.Check type="checkbox" label="Check me out" />
           </Form.Group>
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit" onClick={LoginUser}>
             Submit
           </Button>
         </Form>
       </Stack>
     </>
   )
-}
+} //preciso enviar os dados para la

@@ -6,28 +6,28 @@ import Register from "../pages/Register";
 import { RegisterUser } from "../App";
 
 interface RegisterValidationState {
-  formGridName: string;
-  formGridLastName: string;
-  formGridEmail: string;
-  formGridPassword: string;
-  formGridMonth: number;
-  formGridDay: number;
-  formGridYear: number;
+  formName: string;
+  formLastName: string;
+  formEmail: string;
+  formPassword: string;
+  formMonth: number;
+  formDay: number;
+  formYear: number;
 }
 
 const RegisterValidation: React.FC = () => {
   const [FormData, setFormData] = useState<RegisterValidationState>({
-    formGridName: '',
-    formGridLastName: '',
-    formGridEmail: '',
-    formGridPassword: '',
-    formGridMonth: 0,
-    formGridDay: 0,
-    formGridYear: 0,
+    formName: '',
+    formLastName: '',
+    formEmail: '',
+    formPassword: '',
+    formMonth: 0,
+    formDay: 0,
+    formYear: 0,
   })
 
-  const handleChange = (FormGrid: keyof RegisterValidationState, value: string | null) => {
-    setFormData({ ...FormData, [FormGrid]: value })
+  const handleChange = (Form: keyof RegisterValidationState, value: string | null) => {
+    setFormData({ ...FormData, [Form]: value })
   }
 
   const handleSubmit = () => {
