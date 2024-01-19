@@ -36,7 +36,7 @@ export function LoginUser(formData: FormDataInterface) {
   server.post('/login', {
     email: formData.formEmail,
     password: formData.formPassword
-  });
+    });
 }
 
 function App() {

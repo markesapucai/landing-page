@@ -1,6 +1,8 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const route = express.Router();
+const jwt = require('jsonwebtoken');
 
 route.use(bodyParser.json());
 
@@ -14,7 +16,14 @@ route.post('/register', (req, res) => {
 });
 
 route.post('/login', (req, res) => {
-  UserController.login(req.body);
+  const { email } = { ...req };
+
+  if(UserController.login(req.body)) {
+    const token = jwt.sign({ email }, process.env.JWT_SECRET, { expiresIn: '1d' });
+    res.json({ token });
+    return true
+  }
+
 });
 
 //route.post('/register', UserController.index); // Cadastrar no banco de dados aqui

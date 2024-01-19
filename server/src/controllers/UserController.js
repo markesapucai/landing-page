@@ -15,5 +15,5 @@ exports.register = async function(reqBody) {
 
 exports.login = async function(reqBody) {
   const userTest = new UserModel();
-  await userTest.login(reqBody)
+  return await userTest.login(reqBody)
 }

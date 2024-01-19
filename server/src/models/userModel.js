@@ -46,7 +46,7 @@ class User {
 
         if (!user) {
             console.log('Email não existe');
-            return; // Se o email não existir, encerre a função aqui
+            return false; // Se o email não existir, encerre a função aqui
         }
 
         const passwordMatch = bcrypt.compareSync(this.body.password, user.password);

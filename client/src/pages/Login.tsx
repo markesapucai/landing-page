@@ -67,7 +67,8 @@ const Login: React.FC<LoginProps> = ({ FormData, onChange, onSubmit }) => {
               type="email"
               value={FormData.formEmail}
               onChange={(e) => onChange('formEmail', e.target.value)}
-              placeholder="Enter email" />
+              placeholder="Enter email" 
+              required/>
             <Form.Text className="text-muted">
               We'll never share your email with anyone else.
             </Form.Text>
@@ -79,7 +80,8 @@ const Login: React.FC<LoginProps> = ({ FormData, onChange, onSubmit }) => {
               type="password"
               value={FormData.formPassword}
               onChange={(e) => onChange('formPassword', e.target.value)}
-              placeholder="Password" />
+              placeholder="Password" 
+              required/>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
             <Form.Check type="checkbox" label="Check me out" />

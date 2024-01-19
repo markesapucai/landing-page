@@ -94,7 +94,8 @@ const Register: React.FC<RegisterProps> = ({ FormData, onChange, onSubmit }) => 
               type="text"
               value={FormData.formName}
               onChange={e => onChange('formName', e.target.value)}
-              placeholder="Enter Name" />
+              placeholder="Enter Name" 
+              required/>
           </Form.Group>
 
           <Form.Group as={Col} controlId="formLastName">
@@ -103,7 +104,8 @@ const Register: React.FC<RegisterProps> = ({ FormData, onChange, onSubmit }) => 
               type="text"
               value={FormData.formLastName}
               onChange={e => onChange('formLastName', e.target.value)}
-              placeholder="Last Name" />
+              placeholder="Last Name" 
+              required/>
           </Form.Group>
         </Row>
 
@@ -113,7 +115,8 @@ const Register: React.FC<RegisterProps> = ({ FormData, onChange, onSubmit }) => 
             type="email"
             value={FormData.formEmail}
             onChange={(e) => onChange('formEmail', e.target.value)}
-            placeholder="Enter email" />
+            placeholder="Enter email" 
+            required/>
         </Form.Group>
 
         <Form.Group controlId="formPassword">
@@ -122,7 +125,8 @@ const Register: React.FC<RegisterProps> = ({ FormData, onChange, onSubmit }) => 
             type="password"
             value={FormData.formPassword}
             onChange={(e) => onChange('formPassword', e.target.value)}
-            placeholder="Password" />
+            placeholder="Password" 
+            required/>
         </Form.Group>
 
         <Row className="mb-3">
@@ -132,6 +136,7 @@ const Register: React.FC<RegisterProps> = ({ FormData, onChange, onSubmit }) => 
               type="number"
               value={FormData.formMonth}
               onChange={(e) => onChange('formMonth', e.target.value)}
+              required
             />
           </Form.Group>
 
@@ -141,6 +146,7 @@ const Register: React.FC<RegisterProps> = ({ FormData, onChange, onSubmit }) => 
               type="number"
               value={FormData.formDay}
               onChange={(e) => onChange('formDay', e.target.value)}
+              required
             />
           </Form.Group>
 
@@ -150,6 +156,7 @@ const Register: React.FC<RegisterProps> = ({ FormData, onChange, onSubmit }) => 
               type="number"
               value={FormData.formYear}
               onChange={(e) => onChange('formYear', e.target.value)}
+              required
             />
           </Form.Group>
         </Row>
