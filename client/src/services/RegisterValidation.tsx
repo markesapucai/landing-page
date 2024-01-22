@@ -10,8 +10,8 @@ interface RegisterValidationState {
   formLastName: string;
   formEmail: string;
   formPassword: string;
-  formMonth: number;
   formDay: number;
+  formMonth: number;
   formYear: number;
 }
 
@@ -21,8 +21,8 @@ const RegisterValidation: React.FC = () => {
     formLastName: '',
     formEmail: '',
     formPassword: '',
-    formMonth: 0,
     formDay: 0,
+    formMonth: 0,
     formYear: 0,
   })
 
@@ -30,10 +30,24 @@ const RegisterValidation: React.FC = () => {
     setFormData({ ...FormData, [Form]: value })
   }
 
+  const Example = () => {
+    const { formName, formLastName, formEmail, formPassword, formDay, formMonth, formYear } = FormData;
+    const formBirthday = `${formYear}-${formMonth}-${formDay}`;
+    const newFormData = {
+        formName,
+        formLastName,
+        formEmail,
+        formPassword,
+        formBirthday
+    };
+
+    return newFormData;
+  }
+
   const handleSubmit = () => {
     console.log('Dados do formulário:', FormData);
-
-    RegisterUser(FormData);
+    const NewObj = Example();
+    RegisterUser(NewObj);
   }
 
   return (

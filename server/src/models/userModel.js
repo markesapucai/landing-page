@@ -14,9 +14,7 @@ const UserSchema = new mongoose.Schema({
     lowercase: true
   },
   password: String,
-  month: Number,
-  day: Number,
-  year: Number,
+  birthday: String
 });
 
 const UserModel = mongoose.model('User', UserSchema);

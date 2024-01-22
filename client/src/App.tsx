@@ -13,9 +13,7 @@ interface FormDataInterface {
   formLastName: string;
   formEmail: string;
   formPassword: string;
-  formMonth: number;
-  formDay: number;
-  formYear: number;
+  formBirthday: string;
 }
 
 export function RegisterUser(formData: FormDataInterface) {
@@ -24,9 +22,7 @@ export function RegisterUser(formData: FormDataInterface) {
     lastName: formData.formLastName,
     email: formData.formEmail,
     password: formData.formPassword,
-    month: formData.formMonth,
-    day: formData.formDay,
-    year: formData.formYear,
+    birthday: formData.formBirthday
   })
     .then(response => console.log(response.data))
     .catch(error => console.error(error.response || error.message));
