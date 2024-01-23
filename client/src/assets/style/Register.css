@@ -1,0 +1,22 @@
+.register-container {
+  background-color: rgb(138, 138, 138);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form {
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 2vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-right: 24px;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgb(29, 29, 29);
+  box-shadow: 5px 5px 100px rgba(30, 255, 0, 0.068);
+}
+

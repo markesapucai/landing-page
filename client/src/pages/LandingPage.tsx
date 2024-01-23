@@ -76,12 +76,12 @@ const LandingPage: React.FC = () => {
       <div className="landing-page-container">
         <h1>A SaaS about EDUCATION</h1>
         <hr />
-        <h3>Hi 👋, I'm Markês Sapucai and this is a [
+        <h2>Hi 👋, I'm Markês Sapucai and this is a [
           <span className="mongo">M</span>
           <span className="express">E</span>
           <span className="react">R</span>
           <span className="node">N</span>
-          ] experience!</h3>
+          ] experience!</h2>
         <div className="cards">
 
           <div className='cardIam'>

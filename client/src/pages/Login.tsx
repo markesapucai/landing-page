@@ -40,10 +40,10 @@ export default function Login() {
 
 import NavBar from "../components/NavBar/navBar";
 import Form from 'react-bootstrap/Form';
-import Stack from 'react-bootstrap/Stack';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../components/NavBar/navBar.css'
+import '../assets/style/Register.css';
 //import { LoginUser } from "../App";
 
 interface LoginProps {
@@ -59,8 +59,10 @@ const Login: React.FC<LoginProps> = ({ FormData, onChange, onSubmit }) => {
   return (
     <>
       <NavBar />
-      <Stack gap={2} className="col-md-3 mx-auto my-5">
-        <Form>
+      <div className="register-container">
+
+        <Form className="col-md-3 mx-auto">
+        <h2>Login here 👇</h2>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control
@@ -90,7 +92,7 @@ const Login: React.FC<LoginProps> = ({ FormData, onChange, onSubmit }) => {
             Submit
           </Button>
         </Form>
-      </Stack>
+      </div>
     </>
   )
 }
