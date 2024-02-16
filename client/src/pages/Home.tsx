@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <NavBar />
       <Button variant="primary" onClick={handleShow}>
-        Launch
+        Menu
       </Button>
 
       <Offcanvas show={show} onHide={handleClose}>

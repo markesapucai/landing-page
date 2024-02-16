@@ -76,7 +76,7 @@ const LandingPage: React.FC = () => {
       <div className="landing-page-container">
         <h1>A SaaS about EDUCATION</h1>
         <hr />
-        <h2>Hi 👋, I'm Markês Sapucai and this is a [
+        <h2>Hi 👋, I'm Markê and this is a [
           <span className="mongo">M</span>
           <span className="express">E</span>
           <span className="react">R</span>

@@ -1,102 +1,88 @@
+* {
+  color: rgb(255, 255, 255);
+}
+
 .landing-page-container {
-  background-color: rgb(138, 138, 138);
+  background-color: #021F59;
   margin: 0;
   padding: 0;
   height: 95vh;
 }
-* {
-  color: rgb(255, 255, 255);
-}
-h1, h2, h3, h6 {
+.landing-page-container h1, .landing-page-container h2, .landing-page-container h3, .landing-page-container h6 {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 24px;
 }
-
-.cards {
+.landing-page-container .cards {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 120px;
 }
-
 @media (max-width: 768px) {
-  .cards {
+  .landing-page-container .cards {
     flex-direction: column;
   }
 }
-
-
-
-.card {
+.landing-page-container .card {
   width: 400px;
-  height: 800px;
   perspective: 1000px;
   transform-style: preserve-3d;
   transition: transform 0.5s;
+  margin-top: 20px;
   cursor: pointer;
 }
-
-.agr, .imagem {
+.landing-page-container .card .agr, .landing-page-container .card .imagem {
   height: 400px;
   width: 100%;
   background-size: cover;
   background-position: center;
 }
-
-.agr {
-  background-image: url('../images/foto_eu.jpg');
+.landing-page-container .card .agr.agr, .landing-page-container .card .imagem.agr {
+  background-image: url("../images/fotoMARKK.png");
   border-radius: 1vh;
 }
-
-.imagem {
-  background-image: url('../images/pngegg (9).png');
+.landing-page-container .card .agr.imagem, .landing-page-container .card .imagem.imagem {
+  background-image: url("../images/pngegg (9).png");
 }
-
-.card-inner {
+.landing-page-container .card .card-inner {
   height: 500px;
   transform-style: preserve-3d;
   transition: transform 0.5s;
 }
-
-.card.flipped {
+.landing-page-container .card.flipped {
   transform: rotateY(180deg);
   border-radius: 2vh;
 }
-.card.normal {
+.landing-page-container .card.normal {
   border-radius: 2vh;
 }
-
-.card-front,
-.card-back {
+.landing-page-container .card .card-front,
+.landing-page-container .card .card-back {
   width: 100%;
   height: 100%;
   position: absolute;
   backface-visibility: hidden;
-  box-shadow: 5px 5px 100px rgba(30, 255, 0, 0.068);
-  background-color: rgb(29, 29, 29);
+  box-shadow: 5px 5px 100px #0E7356;
+  background-color: #021F59;
   border-radius: 2vh;
   padding: 30px;
 }
-
-.card-back {
+.landing-page-container .card .card-front.card-back,
+.landing-page-container .card .card-back.card-back {
   transform: rotateY(180deg);
   border-radius: 2vh;
 }
-
-.mongo {
-  color: #4DB33D; /* Cor verde associada ao MongoDB */
+.landing-page-container .mongo {
+  color: #6FB03D !important;
 }
-
-.express {
-  color: #f76161; /* Cor específica para o "E" (Express) */
+.landing-page-container .express {
+  color: #FA9191 !important;
 }
-
-.react {
-  color: #61DAFB; /* Cor azul associada ao React */
+.landing-page-container .react {
+  color: #61DAFB !important;
 }
-
-.node {
-  color: #8CC84B; /* Cor verde associada ao Node.js */
-}
+.landing-page-container .node {
+  color: #8CC84B !important;
+}/*# sourceMappingURL=LandingPage.css.map */

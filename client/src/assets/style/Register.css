@@ -1,3 +1,7 @@
+* {
+  color: black;
+}
+
 .register-container {
   background-color: rgb(138, 138, 138);
   height: 100vh;
@@ -18,5 +22,6 @@ form {
   gap: 10px;
   background-color: rgb(29, 29, 29);
   box-shadow: 5px 5px 100px rgba(30, 255, 0, 0.068);
-}
+} 
+
 
